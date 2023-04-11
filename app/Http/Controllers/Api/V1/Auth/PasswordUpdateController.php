@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Response;
 
 use App\Http\Requests\PasswordUpdateRequest;
+/**
+ * @group Auth
+ */
 class PasswordUpdateController extends Controller
 {
     //

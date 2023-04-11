@@ -9,6 +9,9 @@ use App\Models\Parking;
 use App\Http\Resources\ParkingResource;
 use Illuminate\Http\Response;
 use App\Services\ParkingPriceService;
+/**
+ * @group Parking
+ */
 class ParkingController extends Controller
 {
     //

@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\UserRequest ;
+/**
+ * @group Auth
+ */
 class RegisterController extends Controller
 {
     //
