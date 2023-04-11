@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\Auth\LoginController;
 use App\Http\Controllers\Api\V1\Auth\RegisterController;
+use App\Http\Controllers\Api\V1\Auth\ProfileController;
+use App\Http\Controllers\Api\V1\Auth\PasswordUpdateController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,8 +19,12 @@ use App\Http\Controllers\Api\V1\Auth\RegisterController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('profile', [ProfileController::class, 'show']);
+    Route::put('profile/', [ProfileController::class, 'update']);
+    Route::put('password', PasswordUpdateController::class);
 });
 
 Route::post('auth/register', RegisterController::class);
